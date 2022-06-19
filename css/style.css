@@ -441,3 +441,13 @@
 .text-primary {
     color: #fc740c !important;
 }
+
+.sap-logo {
+    width: 20%;
+}
+.join-now-btn {
+    white-space: nowrap;
+}
+.btn-primary:hover {
+    background: #fc740c;
+}
