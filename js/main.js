@@ -57,6 +57,7 @@
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
+            $(".back-to-top").removeClass("d-none");
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
@@ -66,6 +67,13 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
+
+    $(document).ready(function () {
+        debugger;
+        $(".back-to-top").addClass("d-none");
+        console.log("working");
+    });
+    
 
 
     // Header carousel
@@ -105,6 +113,7 @@
             }
         }
     });
+
+    
     
 })(jQuery);
-
