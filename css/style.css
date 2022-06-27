@@ -463,3 +463,12 @@
     font-weight: bold ;
     vertical-align: text-top;
 }
+
+@media (max-width: 410px) {
+    .navbar-brand {
+        margin-right: 0rem;
+    }
+    .logo-div small {
+        font-size: 10px;
+    }
+}
