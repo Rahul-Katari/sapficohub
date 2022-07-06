@@ -69,7 +69,6 @@
     });
 
     $(document).ready(function () {
-        debugger;
         $(".back-to-top").addClass("d-none");
         console.log("working");
     });
