@@ -10,8 +10,9 @@ if (isset($_POST['submit'])) {
 $to = "rahulkatari99@gmail.com";
 $subject = "HTML email";
 
-$message = "
-<html>
+$message = '
+<!doctype html>
+<html lang="en">
 <head>
 <title>HTML email</title>
 </head>
@@ -27,16 +28,16 @@ $message = "
 
 </tr>
 <tr>
-<td>'$name'</td>
-<td>'$mobile'</td>
-<td>'$whatsapp'</td>
-<td>'$email'</td>
-<td>'$message'</td>
+<td>'.$name.'</td>
+<td>'.$mobile.'</td>
+<td>'.$whatsapp.'</td>
+<td>'.$email.'</td>
+<td>'.$message.'</td>
 </tr>
 </table>
 </body>
 </html>
-";
+';
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -46,7 +47,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 $result = @mail($to,$subject,$message,$headers);
 echo '<script>alert("Email sent successfully");</script>';
-echo '<script>window.location.href="index.html";</script>';
+echo '<script>window.location.href="contact.html";</script>';
 
 }
 
