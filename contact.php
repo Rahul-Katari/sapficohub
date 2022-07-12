@@ -45,6 +45,9 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 
 $result = @mail($to,$subject,$message,$headers);
+echo '<script>alert("Email sent successfully");</script>';
+echo '<script>window.location.href="index.html";</script>';
+
 }
 
 
