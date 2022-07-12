@@ -2,7 +2,7 @@
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $mobile = $_POST['mobile']
+    $mobile = $_POST['mobile'];
     $whatsapp = $_POST['whatsapp'];
     $email = $_POST['email'];
     $message = $_POST['message'];
