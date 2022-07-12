@@ -44,7 +44,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 
 
-mail($to,$subject,$message,$headers);
+$result = @mail($to,$subject,$message,$headers);
 }
 
 
