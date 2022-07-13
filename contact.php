@@ -40,12 +40,12 @@ $message = '
 ';
 
 // Always set content-type when sending HTML email
-$headers[] = "MIME-Version: 1.0" . "\r\n";
-$headers[] = "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers[] = "MIME-Version: 1.0";
+$headers[] = "Content-type:text/html;charset=UTF-8";
 
 $headers[] = 'From: '.$email."\r\n".'Reply-To: '.$email."\r\n" .'X-Mailer: PHP/' . phpversion();
 
-if(mail($to,$subject,$message,$headers)) {
+if(mail($to, $subject, $message, $headers)) {
 echo '<script>alert("Email sent successfully");</script>';
 echo '<script>window.location.href="contact.html";</script>';
 
