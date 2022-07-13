@@ -21,7 +21,7 @@ $name = $_POST['name'];
     // php mailer function
     $result = mail($to, $subject, $message, $headers);
 
-    if(result) {
+    if($result) {
         echo '<script> alert("successful");</script>';
     }
     else {
