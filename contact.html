@@ -130,7 +130,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2969093716624!2d78.428848214354!3d17.44549760571958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90df9f34363d%3A0x1f20dafe6726a48a!2sPrabha%20Mansion!5e0!3m2!1sen!2sin!4v1657555657690!5m2!1sen!2sin" width="350" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div> -->
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="contact.php" method="POST">
+                    <form id="contact-form">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
@@ -141,13 +141,13 @@
                             
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="mobile" placeholder=" Mobile" required>
+                                    <input type="number" class="form-control" name="mobile" placeholder=" Mobile" required>
                                     <label for="email"> Mobile*</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="whatsapp" placeholder=" WhatsApp" >
+                                    <input type="number" class="form-control" name="whatsapp" placeholder=" WhatsApp" >
                                     <label for="email"> WhatsApp</label>
                                 </div>
                             </div>
@@ -266,8 +266,58 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        
+        $("#contact-form").validate({
+            // rules: {
+            //     phone: {
+            //         minlength: 10,
+            //         maxlength: 10,
+            //         number: true
+            //     }
+            // },
+            submitHandler: function (form) {
+                // loader();
+                $.ajax({
+                    type: "POST",
+                    url: "contact.php",
+                    data: $(form).serialize(),
+                    success: function (res) {
+                        if (res == 1) {
+                            // toastr.success('Form Submitted Successfully!');
+                            // $(form).trigger("reset");
+                            // $(form).find('.form-control-placeholder').removeClass(
+                            //     'floating-label');
+                            // $("#pageloader").remove();
+                            // $("#biz-contact-form").removeClass("d-none");
+                            alert("mail successful");
+
+                        } else {
+                            // toastr.error('Something Went Wrong,Try Again!');
+                            // $("#pageloader").remove();
+                            // $("#biz-contact-form").removeClass("d-none");
+                            alert("mail unsuccessful");
+                        }
+                    }
+                });
+                return false;
+            },
+
+        });
+
+        function loader() {
+            //$("#biz-contact-form").on("submit", function () {
+            $("#pageloader").fadeIn();
+            $("#biz-contact-form").addClass("d-none");
+            //});
+            //submit
+        };
+    
+    </script>
 </body>
 
 </html>

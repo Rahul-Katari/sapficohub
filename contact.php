@@ -1,62 +1,42 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $mobile = $_POST['mobile'];
-    $whatsapp = $_POST['whatsapp'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+$mail = new PHPMailer();
 
-$to = "rahulkatari99@gmail.com";
-$subject = "HTML email";
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$message = '
-<!doctype html>
-<html lang="en">
-<head>
-<title>HTML email</title>
-</head>
-<body>
-<p>This email contains HTML Tags!</p>
-<table>
-<tr>
-<th>Name</th>
-<th>Mobile</th>
-<th>Whatsapp</th>
-<th>Email</th>
-<th>Message</th>
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'rahulkatari99@gmail.com';                 // SMTP username
+$mail->Password = '0987654@rK';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
 
-</tr>
-<tr>
-<td>'.$name.'</td>
-<td>'.$mobile.'</td>
-<td>'.$whatsapp.'</td>
-<td>'.$email.'</td>
-<td>'.$message.'</td>
-</tr>
-</table>
-</body>
-</html>
-';
+$mail->From = 'from@example.com';
+$mail->FromName = 'Mailer';
+$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+$mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addReplyTo('info@example.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0";
-$headers .= "Content-type:text/html;charset=UTF-8";
+// $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+// $mail->isHTML(true);                                  // Set email format to HTML
 
-$headers .= 'From: '.$email."\r\n".'Reply-To: '.$email."\r\n" .'X-Mailer: PHP/' . phpversion();
+$mail->Subject = 'Here is the subject';
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-if(mail($to, $subject, $message, $headers)) {
-echo '<script>alert("Email sent successfully");</script>';
-echo '<script>window.location.href="contact.html";</script>';
-
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
 }
-else {
-echo '<script>alert("Email Failed, please try again !");</script>';
-echo '<script>window.location.href="contact.html";</script>';
-}
-
-}
-
-
-
-?>
