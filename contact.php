@@ -43,7 +43,7 @@ $message = '
 $headers[] = "MIME-Version: 1.0" . "\r\n";
 $headers[] = "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-$headers[] = 'From: '.$mail."\r\n".'Reply-To: '.$mail."\r\n" .'X-Mailer: PHP/' . phpversion();
+$headers[] = 'From: '.$email."\r\n".'Reply-To: '.$email."\r\n" .'X-Mailer: PHP/' . phpversion();
 
 if(mail($to,$subject,$message,$headers)) {
 echo '<script>alert("Email sent successfully");</script>';
