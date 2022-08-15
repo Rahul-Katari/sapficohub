@@ -21,6 +21,10 @@
     z-index: 99;
 }
 
+.text-default {
+    color: #52565b !important;
+}
+
 
 /*** Spinner ***/
 #spinner {
@@ -317,10 +321,26 @@
     z-index: 1;
 }
 
+
+/*-------------- blog page css ------------ */
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid rgba(0,0,0,0.125);
+}
+.blog-main .accordion-item {
+    margin-bottom: 10px;
+}
+.posting-key-table td, .posting-key-table th {
+    border-width: 1px ;
+    border-collapse: collapse;
+}
+
 @media (min-width: 768px) {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
+    }
+    .h-md-75 {
+        height: 75%;
     }
 }
 
@@ -472,3 +492,6 @@
         font-size: 10px;
     }
 }
+
+
+/*------------------------ responsive css-------------- */
