@@ -483,6 +483,13 @@
     font-weight: bold ;
     vertical-align: text-top;
 }
+  
+  .join-now-sticky-div {
+    position: fixed;
+    bottom: 50vh;
+    right: 0px;
+    z-index: 9;
+  }
 
 @media (max-width: 410px) {
     .navbar-brand {
