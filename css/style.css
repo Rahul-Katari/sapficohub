@@ -485,9 +485,10 @@
 }
   
   .join-now-sticky-div {
+    transform: rotate(-90deg);
     position: fixed;
     bottom: 50vh;
-    right: 0px;
+    right: -29px;
     z-index: 9;
   }
 
