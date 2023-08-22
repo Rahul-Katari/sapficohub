@@ -1,6 +1,6 @@
-$(document).ready(function() {
+ window.onload = function() {
         window.location.href = '/404.html';
-    });
+    };
 (function ($) {
     "use strict";
 
