@@ -1,7 +1,7 @@
  window.onload = function() {
 const currenturl =window.location.href
-if(!currenturl.includes('404')){
- window.location.href = '/404.html';
+if(!currenturl.includes('maintenance')){
+ window.location.href = '/maintenance.html';
 }    
     };
 (function ($) {
