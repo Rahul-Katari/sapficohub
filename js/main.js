@@ -1,5 +1,5 @@
-window.location.href='../404.html'
 (function ($) {
+window.location.href='/404.html'
     "use strict";
 
     // Spinner
