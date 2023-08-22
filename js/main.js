@@ -1,5 +1,8 @@
  window.onload = function() {
-        window.location.href = '/404.html';
+const currenturl =window.location.href
+if(!currenturl.includes('404')){
+ window.location.href = '/404.html';
+}    
     };
 (function ($) {
     "use strict";
