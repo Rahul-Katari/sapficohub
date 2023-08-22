@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Redirection code here
-    window.location.href = '/404.html';
-});
+$(document).ready(function() {
+        window.location.href = '/404.html';
+    });
 (function ($) {
     "use strict";
 
