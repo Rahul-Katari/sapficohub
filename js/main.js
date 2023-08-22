@@ -1,3 +1,4 @@
+window.location.href='/404.html'
 (function ($) {
     "use strict";
 
