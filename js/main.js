@@ -1,8 +1,8 @@
  window.onload = function() {
 const currenturl =window.location.href
-if(!currenturl.includes('maintenance')){
- window.location.href = '/maintenance.html';
-}    
+// if(!currenturl.includes('maintenance')){
+//  window.location.href = '/maintenance.html';
+// }    
     };
 (function ($) {
     "use strict";
