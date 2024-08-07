@@ -145,7 +145,7 @@
                             
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" name="mobile" placeholder=" Mobile" required>
+                                    <input type="number" class="form-control" name="mobile" placeholder=" Mobile" required maxlength="10" pattern="\d{10}" oninput="validateMobileNumber(this)">
                                     <label for="mobile"> Mobile*</label>
                                 </div>
                             </div>
@@ -269,7 +269,14 @@
     </div>
     <!-- Footer End -->
 
-
+    <!-- mobile number vaidation -->
+    <script>
+        function validateMobileNumber(input) {
+            const value = input.value;
+            // Remove non-digit characters and limit to 10 digits
+            input.value = value.replace(/\D/g, '').slice(0, 10);
+        }
+    </script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
