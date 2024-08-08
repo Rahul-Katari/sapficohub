@@ -493,7 +493,9 @@
     right: -29px;
     z-index: 9;
   }
-
+.form-control {
+    border-radius: 8px;
+}
 @media (max-width: 410px) {
     .navbar-brand {
         margin-right: 0rem;

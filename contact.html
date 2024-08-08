@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -33,7 +35,8 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -46,8 +49,8 @@
         <a href="index.html" class="navbar-brand d-flex align-items-center px-sm-4 px-lg-5">
             <h1 class="mb-0 me-2">SAP</h1>
             <div class="logo-div">
-            <h2 class="m-0 text-primary">
-                FICO-HUB</h2>
+                <h2 class="m-0 text-primary">
+                    FICO-HUB</h2>
                 <small>100% Job guarantee program</small>
             </div>
         </a>
@@ -62,12 +65,13 @@
                 <a href="blog.html" class="nav-item nav-link">Blogs</a>
                 <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
-            <a href="#contact-form" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="#contact-form-wrapper" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
+                    class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <div class="join-now-sticky-div">
-        <a href="contact.html#contact-form" class="btn-primary px-3 py-2 btn join-now-sticky">Join Now</a>
-        </div>
+        <a href="contact.html#contact-form-wrapper" class="btn-primary px-3 py-2 btn join-now-sticky">Join Now</a>
+    </div>
     <!-- Navbar End -->
 
 
@@ -92,7 +96,7 @@
 
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5" id="contact-form">
+    <div class="container-xxl py-5" id="contact-form-wrapper">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
@@ -103,7 +107,8 @@
                     <h5>Get In Touch</h5>
                     <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
                     <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ms-3">
@@ -112,7 +117,8 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ms-3">
@@ -121,7 +127,8 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                            style="width: 50px; height: 50px;">
                             <i class="fa fa-envelope-open text-white"></i>
                         </div>
                         <div class="ms-3">
@@ -138,20 +145,23 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name"
+                                        required>
                                     <label for="name"> Name*</label>
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" name="mobile" placeholder=" Mobile" required maxlength="10" pattern="\d{10}" oninput="validateMobileNumber(this)">
+                                    <input type="tel" class="form-control" name="mobile" placeholder=" Mobile"
+                                        required maxlength="10" minlength="10" pattern=".{10,}"
+                                        oninput="validateMobileNumber(this)" title="Please Enter a Valid Mobile Number">
                                     <label for="mobile"> Mobile*</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" name="whatsapp" placeholder=" WhatsApp" >
+                                    <input type="tel" class="form-control" name="whatsapp" placeholder=" WhatsApp">
                                     <label for="whatsapp"> WhatsApp</label>
                                 </div>
                             </div>
@@ -163,15 +173,17 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" name="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" name="message"
+                                        style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+                            <p id="contact-form-status" class="text-danger"></p>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" id="contact-form-button">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" id="contact-form-button">Send
+                                    Message</button>
                             </div>
                         </div>
-                        <p id="contact-form-status"></p>
                     </form>
                 </div>
             </div>
@@ -192,9 +204,14 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact - USA</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Park Meadows Drive , Littleton, Colorado-80122</p>
-                    <a href="tel:+1(720)2611132"><p class="mb-2"><i class="fa fa-phone-alt me-3" ></i>+1 (720) 261 1132</p></a>
-                    <a href="mailto:info@sapficohub.com"><p class="mb-2"><i class="fa fa-envelope me-3" ></i>info@sapficohub.com</p></a>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Park Meadows Drive , Littleton,
+                        Colorado-80122</p>
+                    <a href="tel:+1(720)2611132">
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 (720) 261 1132</p>
+                    </a>
+                    <a href="mailto:info@sapficohub.com">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
+                    </a>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -204,9 +221,14 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact - India</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>#60C, 2nd Floor, Near Arjun Theater, Western Hills, KPHB Hyderabad-72</p>
-                    <a href="tel:+919395191219"><p class="mb-2"><i class="fa fa-phone-alt me-3" ></i>+91 9395191219</p></a>
-                    <a href="mailto:info@sapficohub.com"> <p class="mb-2"><i class="fa fa-envelope me-3" ></i>info@sapficohub.com</p></a>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>#60C, 2nd Floor, Near Arjun Theater,
+                        Western Hills, KPHB Hyderabad-72</p>
+                    <a href="tel:+919395191219">
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9395191219</p>
+                    </a>
+                    <a href="mailto:info@sapficohub.com">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
+                    </a>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -242,7 +264,8 @@
                     <p>Subscribe to the Sap Fico Hub Newsletter</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -253,7 +276,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">sapficohub.com</a>, All Right Reserved.
 
-                       
+
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -276,6 +299,53 @@
             // Remove non-digit characters and limit to 10 digits
             input.value = value.replace(/\D/g, '').slice(0, 10);
         }
+    </script>
+    <!-- form submission  -->
+    <script>
+        var form = document.getElementById("contact-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("contact-form-status");
+            var submit = document.getElementById("contact-form-button");
+            submit.setAttribute("disabled", true);
+            submit.innerHTML = 'Sending...';
+            var data = new FormData(event.target);
+            let mobile = data.get('mobile');
+            if (mobile.length === 10 && ["9", "8", '7', '6'].some(num => mobile.startsWith(num))) {
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset();
+                        submit.setAttribute('disabled', false);
+                        submit.innerHTML = 'Send Message';
+                        window.location.replace('/');
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            } else {
+                                status.innerHTML = "Oops! There was a problem submitting your form"
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                });
+            }
+            else {
+                status.innerHTML = "Oops! Please Enter a Valid Mobile Number"
+                submit.setAttribute('disabled', false);
+                submit.innerHTML = 'Send Message';
+            }
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
