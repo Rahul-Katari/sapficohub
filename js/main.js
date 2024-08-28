@@ -241,3 +241,23 @@ function handleSubmit(event) {
   // Optionally, disable the submit button to prevent multiple submissions
   // $('#submitButton').prop('disabled', true);
 }
+
+// function to load js files 
+function loadScript(url) {
+  const script = document.createElement('script');
+  script.src = url;
+  script.onload = function() {
+    console.log(url + 'has been loaded');
+  }
+  document.body.appendChild(script);
+}
+
+// list of files 
+const scriptsToLoad = [
+  'js/footer.js'
+]
+
+// load scripts after dom is loaded 
+document.addEventListener('DOMContentLoaded', function(){
+  scriptsToLoad.forEach(loadScript)
+})
