@@ -18,7 +18,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
                     </a>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sapfico_hub/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -26,8 +26,8 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact - Hyderabad</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>#60C, 2nd Floor, Near Arjun Theater,
-                        Western Hills, KPHB Hyderabad-72</p>
+                    <div class="mb-2"><a href="https://maps.app.goo.gl/LAhZpv8omu58pLy79" target="_blank" ><i class="fa fa-map-marker-alt me-3"></i>#60C, 2nd Floor, Near Arjun Theater,
+                        Western Hills, KPHB Hyderabad-72</a></div>
                     <a href="tel:+919395191219">
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9395191219</p>
                     </a>
@@ -35,7 +35,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
                     </a>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sapfico_hub/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -54,7 +54,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
                     </a>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sapfico_hub/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -63,8 +63,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact - Bengaluru</h4>
 
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>6th floor, Trifecta Adatto, 21, ITPL Main
-                        Rd, Garudachar Palya, Mahadevapura, Bengaluru, Karnataka 560048</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>#11/3, Prashanth complex, 24th Main Rd, 6th Phase, rose garden road. JP nagar, Bengaluru, Karnataka 560078</p>
                     <a href="tel:+919395191219">
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9395191219</p>
                     </a>
@@ -72,7 +71,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@sapficohub.com</p>
                     </a>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sapfico_hub/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
