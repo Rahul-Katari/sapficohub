@@ -496,6 +496,27 @@
 .form-control {
     border-radius: 8px;
 }
+.top-navbar a{
+    color: #000;
+}
+.top-navbar a:hover{
+    color: #2f269c;
+    font-weight: 700;
+}
+.top-navbar .social-icons a{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.top-navbar .social-icons a:hover{
+    background-color: var(--primary);
+    color: white;
+}
 @media (max-width: 410px) {
     .navbar-brand {
         margin-right: 0rem;
