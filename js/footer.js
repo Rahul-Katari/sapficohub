@@ -45,7 +45,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                     <h4 class="text-white mb-3">Contact - Vizag</h4>
 
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Flat no:401, Sri Nivasam Apartment, Sound
-                        and Sound Layout, Bakkannapalem,
+                        and Sound Layout, PM Palem,
                         Vizag - 530041</p>
                     <a href="tel:+919395191219">
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9395191219</p>
@@ -63,7 +63,7 @@ const footerHTML = `<div class="container-fluid bg-dark text-light footer pt-5 m
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact - Bengaluru</h4>
 
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No.12,165/1,masjid Building,1st floor,begur mail road,Bommanahalli, Bangalore - 560068</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No.12,165/1,masjid Building,1st floor,begur main road,Bommanahalli, Bangalore - 560068</p>
                     <a href="tel:+919395191219">
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7022170619</p>
                     </a>
