@@ -190,8 +190,9 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background: transparent;
-    border: 1px solid #FFFFFF;
+    background: #7e7e7e;
+    /* border: 1px solid #FFFFFF; */
+    border-radius: 10px;
     font-size: 22px;
     transition: .5s;
 }
