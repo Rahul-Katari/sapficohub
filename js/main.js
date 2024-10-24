@@ -126,8 +126,7 @@ function addModal() {
               <h5 class="modal-title" id="exampleModalLabel">Enquire Now</h5>
             </div>
             <div class="modal-body">
-            <form id="enquire-modal-form" action="https://formspree.io/f/mgeqelyl"
-            method="POST">
+            <form id="enquire-modal-form">
               <div class="form-floating mb-3">
   <input type="text" class="form-control" id="name" name="name" placeholder="Bat Man" required>
   <label for="name">Name*</label>
@@ -168,7 +167,12 @@ function validateMobileNumber(input) {
   // Remove non-digit characters and limit to 10 digits
   input.value = value.replace(/\D/g, '').slice(0, 10);
 }
-
+function emailInit() {
+  // https://dashboard.emailjs.com/admin/account
+  emailjs.init({
+    publicKey: "idzfvJAMIeiqosu-S",
+  });
+}
 // Function to check if the modal should be shown
 function checkModal() {
   var showModal = localStorage.getItem("showModal");
@@ -184,6 +188,7 @@ function checkModal() {
   }
 
   async function handleSubmit(event) {
+    emailInit();
     let form = document.getElementById("enquire-modal-form");
     event.preventDefault();
     var status = document.getElementById("enquire-form-status");
@@ -193,32 +198,20 @@ function checkModal() {
     var data = new FormData(event.target);
     let mobile = data.get('mobile');
     if (mobile.length === 10 && ["9", "8", '7', '6'].some(num => mobile.startsWith(num))) {
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset();
-          submit.removeAttribute('disabled');
-          submit.innerHTML = 'Submit';
-          window.alert('Thank you for your Submission');
-          $("#enquire-modal").modal("hide");
-          localStorage.setItem("showModal", true);
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('service_kts49gp', 'template_sbvcain', this)
+          .then((response) => {
+            window.alert("Form Submitted Successfully");
+            form.reset();
+            submit.removeAttribute('disabled');
+            submit.innerHTML = 'Submit';
+            $("#enquire-modal").modal("hide");
+            localStorage.setItem("showModal", true);
+          }, (error) => {
+            window.alert('Form Submission error', error);
+          });
       });
     }
     else {
@@ -246,7 +239,7 @@ function handleSubmit(event) {
 function loadScript(url) {
   const script = document.createElement('script');
   script.src = url;
-  script.onload = function() {
+  script.onload = function () {
     console.log(url + 'has been loaded');
   }
   document.body.appendChild(script);
@@ -258,6 +251,6 @@ const scriptsToLoad = [
 ]
 
 // load scripts after dom is loaded 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
   scriptsToLoad.forEach(loadScript)
 })

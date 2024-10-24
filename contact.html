@@ -45,7 +45,7 @@
 
 
     <!-- Navbar Start -->
-<div class="border-bottom text-white py-3 pe-md-4 pe-3 px-3 ps-md-0 top-navbar">
+    <div class="border-bottom text-white py-3 pe-md-4 pe-3 px-3 ps-md-0 top-navbar">
         <div class="d-flex justify-content-between align-items-center gap-3">
 
             <!-- Left Section -->
@@ -185,7 +185,8 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2969093716624!2d78.428848214354!3d17.44549760571958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90df9f34363d%3A0x1f20dafe6726a48a!2sPrabha%20Mansion!5e0!3m2!1sen!2sin!4v1657555657690!5m2!1sen!2sin" width="350" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div> -->
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form id="contact-form" action="https://formspree.io/f/mgeqelyl" method="POST">
+                    <!-- <form id="contact-form" action="https://formspree.io/f/mgeqelyl" method="POST"> -->
+                    <form id="contact-form">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
@@ -237,7 +238,7 @@
 
 
     <!-- Footer Start -->
-<footer id="footer"></footer>
+    <footer id="footer"></footer>
     <!-- Footer End -->
 
     <!-- mobile number vaidation -->
@@ -250,50 +251,50 @@
     </script>
     <!-- form submission  -->
     <script>
-        var form = document.getElementById("contact-form");
+        // var form = document.getElementById("contact-form");
 
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("contact-form-status");
-            var submit = document.getElementById("contact-form-button");
-            submit.setAttribute("disabled", true);
-            submit.innerHTML = 'Sending...';
-            var data = new FormData(event.target);
-            let mobile = data.get('mobile');
-            if (mobile.length === 10 && ["9", "8", '7', '6'].some(num => mobile.startsWith(num))) {
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset();
-                        submit.setAttribute('disabled', false);
-                        submit.innerHTML = 'Send Message';
-                        window.location.replace('/');
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                });
-            }
-            else {
-                status.innerHTML = "Oops! Please Enter a Valid Mobile Number"
-                submit.setAttribute('disabled', false);
-                submit.innerHTML = 'Send Message';
-            }
-        }
-        form.addEventListener("submit", handleSubmit)
+        // async function handleSubmit(event) {
+        //     event.preventDefault();
+        //     var status = document.getElementById("contact-form-status");
+        //     var submit = document.getElementById("contact-form-button");
+        //     submit.setAttribute("disabled", true);
+        //     submit.innerHTML = 'Sending...';
+        //     var data = new FormData(event.target);
+        //     let mobile = data.get('mobile');
+        //     if (mobile.length === 10 && ["9", "8", '7', '6'].some(num => mobile.startsWith(num))) {
+        //         fetch(event.target.action, {
+        //             method: form.method,
+        //             body: data,
+        //             headers: {
+        //                 'Accept': 'application/json'
+        //             }
+        //         }).then(response => {
+        //             if (response.ok) {
+        //                 status.innerHTML = "Thanks for your submission!";
+        //                 form.reset();
+        //                 submit.setAttribute('disabled', false);
+        //                 submit.innerHTML = 'Send Message';
+        //                 window.location.replace('/');
+        //             } else {
+        //                 response.json().then(data => {
+        //                     if (Object.hasOwn(data, 'errors')) {
+        //                         status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        //                     } else {
+        //                         status.innerHTML = "Oops! There was a problem submitting your form"
+        //                     }
+        //                 })
+        //             }
+        //         }).catch(error => {
+        //             status.innerHTML = "Oops! There was a problem submitting your form"
+        //         });
+        //     }
+        //     else {
+        //         status.innerHTML = "Oops! Please Enter a Valid Mobile Number"
+        //         submit.setAttribute('disabled', false);
+        //         submit.innerHTML = 'Send Message';
+        //     }
+        // }
+        // form.addEventListener("submit", handleSubmit)
     </script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -308,6 +309,30 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "idzfvJAMIeiqosu-S",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_kts49gp', 'template_sbvcain', this)
+                    .then(() => {
+                        window.alert("Form Submitted Successfully");
+                        document.getElementById('contact-form').reset();
+                    }, (error) => {
+                        window.alert('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 
