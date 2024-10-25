@@ -1,0 +1,21 @@
+[
+    {
+      "name": "John Doe",
+      "designation": "CEO, Company ABC",
+      "testimonial": "This company exceeded my expectations. Their services are outstanding!",
+      "image": "img/john.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "designation": "Marketing Manager, Company XYZ",
+      "testimonial": "Amazing experience! Highly recommend their professional services.",
+      "image": "img/jane.jpg"
+    },
+    {
+      "name": "Michael Johnson",
+      "designation": "Product Manager, Startup DEF",
+      "testimonial": "The best in the industry. I'm impressed by their attention to detail.",
+      "image": "img/michael.jpg"
+    }
+  ]
+  
